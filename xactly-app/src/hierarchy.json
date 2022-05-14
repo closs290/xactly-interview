@@ -1,0 +1,57 @@
+{
+    "VP_Sales": {
+        "Sales Manager": {
+            "Location": "North America",
+            "Status": "critical",
+            "Sales Lead": {
+                "Location": "Canada",
+                "Status": "normal",
+                "Sales Rep": {
+                    "Location": "Toronto",
+                    "Status": "normal"
+                },
+                "Sales Rep": {
+                    "Location": "Vancouver",
+                    "Status": "normal"
+                }
+            },
+            "Sales Lead": {
+                "Location": "USA",
+                "Sales Rep": {
+                    "Location": "New York",
+                    "Status": "warning"
+                },
+                "Sales Rep": {
+                    "Location": "Dallas",
+                    "Status": "critical"
+                },
+                "Sales Rep": {
+                    "Location": "Los Angeles",
+                    "Status": "critical"
+                }
+            }
+        },
+        "Sales Manager": {
+            "Location": "Europe",
+            "Status": "warning",
+            "Sales Lead": {
+                "Sales Rep": {
+                    "Location": "Berlin",
+                    "Status": "normal"
+                },
+                "Sales Rep": {
+                    "Location": "Frankfurt",
+                    "Status": "critical"
+                }
+            },
+            "Sales Lead": {
+                "Location": "Italy",
+                "Status": "normal",
+                "Sales Rep": {
+                    "Location": "Milan",
+                    "Status": "normal"
+                }
+            }
+        }
+    }
+}
