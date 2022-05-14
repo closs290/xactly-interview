@@ -1,17 +1,22 @@
-import logo from './logo.svg';
 import './App.css';
 import styled from 'styled-components';
 import { Tree, TreeNode } from 'react-organizational-chart';
 
-const ExampleTree = () => (
-  <Tree label={<div>Root</div>}>
-    <TreeNode label={<div>Child 1</div>}>
-      <TreeNode label={<div>Grand Child</div>} />
-    </TreeNode>
-  </Tree>
-);
+const NormalNode = styled.div`
+  padding: 5px;
+  border-radius: 8px;
+  display: inline-block;
+  border: 1px solid blue;
+`;
 
-const StyledNode = styled.div`
+const WarningNode = styled.div`
+  padding: 5px;
+  border-radius: 8px;
+  display: inline-block;
+  border: 1px solid orange;
+`;
+
+const CriticalNode = styled.div`
   padding: 5px;
   border-radius: 8px;
   display: inline-block;
@@ -23,20 +28,25 @@ const StyledTreeExample = () => (
     lineWidth={'2px'}
     lineColor={'green'}
     lineBorderRadius={'10px'}
-    label={<StyledNode>Root</StyledNode>}
+    label={<CriticalNode>VP of Sales</CriticalNode>}
   >
-    <TreeNode label={<StyledNode>Child 1</StyledNode>}>
-      <TreeNode label={<StyledNode>Grand Child</StyledNode>} />
+    <TreeNode label={<CriticalNode>Sales Manager (North America)</CriticalNode>}>
+      <TreeNode label={<NormalNode>Sales Lead (Canada)</NormalNode>} />
+        <TreeNode label={<NormalNode>Sales Representative (Toronto) </NormalNode>} />
+        <TreeNode label={<NormalNode>Sales Representative (Vancouver)</NormalNode>} />
+      <TreeNode label={<CriticalNode>Sales Lead (USA)</CriticalNode>} />
+        <TreeNode label={<WarningNode>Sales Representative (New York)</WarningNode>} />
+        <TreeNode label={<CriticalNode>Sales Representative (Dallas)</CriticalNode>} />
+        <TreeNode label={<CriticalNode>Sales Representative (Los Angeles)</CriticalNode>} />
     </TreeNode>
-    <TreeNode label={<StyledNode>Child 2</StyledNode>}>
-      <TreeNode label={<StyledNode>Grand Child</StyledNode>}>
-        <TreeNode label={<StyledNode>Great Grand Child 1</StyledNode>} />
-        <TreeNode label={<StyledNode>Great Grand Child 2</StyledNode>} />
+    <TreeNode label={<WarningNode>Sales Manager (Europe)</WarningNode>}>
+      <TreeNode label={<WarningNode>Sales Lead (Germany)</WarningNode>}>
+        <TreeNode label={<NormalNode>Sales Representative (Berlin)</NormalNode>} />
+        <TreeNode label={<CriticalNode>Sales Representative (Frankfurt)</CriticalNode>} />
       </TreeNode>
-    </TreeNode>
-    <TreeNode label={<StyledNode>Child 3</StyledNode>}>
-      <TreeNode label={<StyledNode>Grand Child 1</StyledNode>} />
-      <TreeNode label={<StyledNode>Grand Child 2</StyledNode>} />
+      <TreeNode label={<NormalNode>Sales Lead (Italy)</NormalNode>}>
+        <TreeNode label={<NormalNode>Sales Representative (Milan)</NormalNode>} />
+      </TreeNode>
     </TreeNode>
   </Tree>
 );
@@ -45,20 +55,7 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <ExampleTree />
         <StyledTreeExample />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
       </header>
     </div>
   );
