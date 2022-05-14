@@ -31,13 +31,15 @@ const StyledTreeExample = () => (
     label={<CriticalNode>VP of Sales</CriticalNode>}
   >
     <TreeNode label={<CriticalNode>Sales Manager (North America)</CriticalNode>}>
-      <TreeNode label={<NormalNode>Sales Lead (Canada)</NormalNode>} />
+      <TreeNode label={<NormalNode>Sales Lead (Canada)</NormalNode>} >
         <TreeNode label={<NormalNode>Sales Representative (Toronto) </NormalNode>} />
         <TreeNode label={<NormalNode>Sales Representative (Vancouver)</NormalNode>} />
-      <TreeNode label={<CriticalNode>Sales Lead (USA)</CriticalNode>} />
+      </TreeNode>
+      <TreeNode label={<CriticalNode>Sales Lead (USA)</CriticalNode>}>
         <TreeNode label={<WarningNode>Sales Representative (New York)</WarningNode>} />
         <TreeNode label={<CriticalNode>Sales Representative (Dallas)</CriticalNode>} />
         <TreeNode label={<CriticalNode>Sales Representative (Los Angeles)</CriticalNode>} />
+      </TreeNode>
     </TreeNode>
     <TreeNode label={<WarningNode>Sales Manager (Europe)</WarningNode>}>
       <TreeNode label={<WarningNode>Sales Lead (Germany)</WarningNode>}>
