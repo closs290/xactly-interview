@@ -17,6 +17,7 @@ The display is refreshed every 30 minutes to show the latest status of the hiera
 The VP of sales wants to see the entire hierarchy on the TV along with the status of the nodes so that she can with a quick glance get an idea of how her organization is doing. If some areas are critical (red) then she can drill down into the problem areas on her laptop.
 
 Sample hierarchy:
+![image](https://user-images.githubusercontent.com/59987065/168410388-01e1c754-5e96-4097-a1ac-3bdbfd797f39.png)
 
   VP of Sales [critical]
 
